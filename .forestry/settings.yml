@@ -4,6 +4,15 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: heading
+  label: Edit
+- type: directory
+  path: content/post
+  label: Posts
+  create: all
+  match: "**/*"
+  templates:
+  - post
 - type: directory
   path: ''
   label: Post
@@ -16,13 +25,6 @@ sections:
   label: Home
 - type: heading
   label: Content
-- type: directory
-  path: content/post
-  label: Posts
-  create: all
-  match: "**/*"
-  templates:
-  - post
 - type: heading
   label: Data
 - type: directory
